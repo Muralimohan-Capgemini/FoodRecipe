@@ -3,17 +3,16 @@ package com.example.food.service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.example.food.dao.FoodRepository;
-import com.example.food.exception.FoodItemNotFoundException;
 import com.example.food.model.Items;
 
 @Component
+@Service
 public class FoodService {
 
 	@Autowired

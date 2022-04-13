@@ -18,7 +18,7 @@ class FoodDemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		Assertions.assertThat(foodController.getAllItems()).isNotNull();
+		Assertions.assertThat(foodController).isNotNull();
 	}
 
 }

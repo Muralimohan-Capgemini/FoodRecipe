@@ -47,9 +47,9 @@ class FoodControllersTest {
 	
 	private static ObjectMapper mapper = new ObjectMapper();
 	
-	Items items_1 = new Items(1,"Paneer Biryani","Veg","13-04-2022 10:12",3,"Vegitables paneer added","oils, GHEE ");
-	Items items_2 = new Items(2,"Veg Biryani","Veg","13-04-2022 11:12",5,"Vegitables added","oil, ghee,masala ");
-	Items items_3 = new Items(3,"Chicken Biryani","Non-Veg","13-04-2022 10:42",5,"chicken,oil, ","oils,ghee,masala,chicken ");
+	Items items_1 = new Items(1,"Paneer Biryani","Veg","13-05-2022 10:12",3,"Vegitables paneer added","oils, GHEE ");
+	Items items_2 = new Items(2,"Veg Biryani","Veg","13-05-2022 11:12",5,"Vegitables added","oil, ghee,masala ");
+	Items items_3 = new Items(3,"Chicken Biryani","Non-Veg","13-05-2022 10:42",5,"chicken,oil, ","oils,ghee,masala,chicken ");
 	
 	@Before(value = "")
 	public void setup() {
@@ -105,7 +105,7 @@ class FoodControllersTest {
 
 	@Test
 	void testUpdateItems() throws Exception {
-		Items items_4 = new Items(2,"Mutton Biryani","Non-Veg","13-04-2022 11:12",7,"Mutton, Vegitables, Onions","oil, ghee,masala ");
+		Items items_4 = new Items(2,"Mutton Biryani","Non-Veg","13-05-2022 11:12",7,"Mutton, Vegitables, Onions","oil, ghee,masala ");
 		
 		Mockito.when(foodService.updateItems(ArgumentMatchers.anyInt(),ArgumentMatchers.any())).thenReturn("Saved");
         String json = mapper.writeValueAsString(items_4);

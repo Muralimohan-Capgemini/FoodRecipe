@@ -42,7 +42,7 @@ public class FoodController {
 	
 	@GetMapping("/getByCatgeroy/{category}")
 	public List<Items> getByCatgeroy(@PathVariable String category){
-		if(category == null) {
+		 if(category == null || category.toLowerCase().equals("null"))  {
 			throw new FoodItemNotFoundException("Invalid Category Code");
 		}
 		return foodServices.getByCatgeroy(category);
